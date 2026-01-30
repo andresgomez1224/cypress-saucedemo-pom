@@ -1,15 +1,7 @@
 pipeline {
     agent any
 
-    
-
     stages {
-        stage('Clonar repositorio') {
-            steps {
-                git 'https://github.com/andresgomez1224/cypress-saucedemo-pom'
-            }
-        }
-
         stage('Instalar dependencias') {
             steps {
                 sh 'npm install'
@@ -30,3 +22,4 @@ pipeline {
         }
     }
 }
+
